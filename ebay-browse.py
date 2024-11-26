@@ -25,8 +25,9 @@ def get_results(tokenoauth, url):
     #print(response['total'])
     return response
 
-# Define the CSV file name
+# Define the CSV file names
 csv_file = 'ebaydump.csv'
+search_file = 'cpulist.csv'
 
 fieldnames = ['itemId', 'title', 'price_value', 'seller_username', 'seller_feedbackPercentage', 'seller_feedbackScore', 
                 'condition', 'shippingOptions_shippingCostType', 'shippingOptions_shippingCost_value', 'buyingOptions', 'itemWebUrl', 
@@ -71,6 +72,14 @@ def get_mapped_data(response):
     ]
     return mapped_data
 
+# Read from CSV
+def read_csv(search_file):
+    with open(search_file, mode='r', encoding='utf-8') as file: 
+        reader = csv.DictReader(file)
+        for row in reader:
+            print(row)
+    print(f'Data read from {search_file}')
+
 # Write to CSV
 def write_csv(csv_file, mapped_data, fieldnames, response):
     with open(csv_file, mode='w', newline='', encoding='utf-8') as file: 
@@ -91,3 +100,4 @@ def write_csv(csv_file, mapped_data, fieldnames, response):
 
 response = get_results(tokenoauth, url)
 write_csv(csv_file, get_mapped_data(response['itemSummaries']), fieldnames, response)
+read_csv(search_file)
