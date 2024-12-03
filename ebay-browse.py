@@ -40,7 +40,7 @@ def read_csv(search_file):
 def get_results(tokenoauth, url):
     headers = { 'Accept-Lanuage': 'en-US', 'X-EBAY-C-MARKETPLACE-ID': 'EBAY_US', 'Authorization': 'Bearer ' + tokenoauth }
     response = requests.get(url, headers=headers).json()
-    #print(response['total'])
+    #print(response)
     return response
 
 fieldnames = ['itemId', 'title', 'price_value', 'seller_username', 'seller_feedbackPercentage', 'seller_feedbackScore', 
@@ -112,4 +112,7 @@ for row in search_file_processed:
     search_value = row['name']
     url = 'https://api.ebay.com/buy/browse/v1/item_summary/search?q=1u ' + search_value + '&category_ids=11211&filter=price:[..1000],priceCurrency:USD,itemLocationCountry:US,searchInDescription:true'
     response = get_results(tokenoauth, url)
+    if response['total'] == 0:
+        print(search_value + ' Empty')
+        continue
     first_pass = write_csv(csv_file, get_mapped_data(response['itemSummaries']), fieldnames, response, first_pass, tokenoauth)
