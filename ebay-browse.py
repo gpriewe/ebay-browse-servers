@@ -109,7 +109,7 @@ def write_csv(csv_file, mapped_data, fieldnames, response, first_pass, tokenoaut
 
 search_file_processed = read_csv(search_file)
 for row in search_file_processed:
-    search_value = row['name']
+    search_value = row['short_name']
     url = 'https://api.ebay.com/buy/browse/v1/item_summary/search?q=1u ' + search_value + '&category_ids=11211&filter=price:[..1000],priceCurrency:USD,itemLocationCountry:US,searchInDescription:true'
     response = get_results(tokenoauth, url)
     if response['total'] == 0:
