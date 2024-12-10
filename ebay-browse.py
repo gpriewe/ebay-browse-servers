@@ -9,7 +9,6 @@ first_pass = True
 
 prd_keys = dotenv_values('.prd-env')
 encoded_keys = base64.b64encode((prd_keys['APP_ID'] + ':' + prd_keys['CERT_ID']).encode('utf-8')).decode('utf-8')
-search_value = '5118'
 
 def generate_oauth_token(encoded_keys):
     urloauth = 'https://api.ebay.com/identity/v1/oauth2/token'
@@ -29,7 +28,7 @@ tokenoauth = generate_oauth_token(encoded_keys)
 
 # Read from CSV
 def read_csv(search_file):
-    with open(search_file, mode='r', encoding='utf-8') as file: 
+    with open(search_file, mode='r') as file:
         reader = csv.DictReader(file)
         #for row in reader:
             #print(row)
@@ -43,8 +42,9 @@ def get_results(tokenoauth, url):
     #print(response)
     return response
 
-fieldnames = ['itemId', 'title', 'price_value', 'seller_username', 'seller_feedbackPercentage', 'seller_feedbackScore', 
-                'condition', 'shippingOptions_shippingCostType', 'shippingOptions_shippingCost_value', 'buyingOptions', 'itemWebUrl', 
+fieldnames = ['itemId', 'title', 'list_short_name', 'list_launch_date', 'list_total_cores', 'price_value', 'price_per_core', 
+                'seller_username', 'seller_feedbackPercentage', 'seller_feedbackScore', 'condition', 
+                'shippingOptions_shippingCostType', 'shippingOptions_shippingCost_value', 'buyingOptions', 'itemWebUrl', 
                 'itemLocation_postalCode', 'itemCreationDate']
 
 fieldname_mapping = {
@@ -87,7 +87,7 @@ def get_mapped_data(response):
     return mapped_data
 
 # Write to CSV
-def write_csv(csv_file, mapped_data, fieldnames, response, first_pass, tokenoauth):
+def write_csv(csv_file, mapped_data, fieldnames, response, first_pass, tokenoauth, row_search_file_processed):
     with open(csv_file, mode='a', newline='', encoding='utf-8') as file: 
         writer = csv.DictWriter(file, fieldnames=fieldnames)
         # Write the header
@@ -95,12 +95,24 @@ def write_csv(csv_file, mapped_data, fieldnames, response, first_pass, tokenoaut
             writer.writeheader()
             first_pass = False
 
+        for item in mapped_data:
+            item['list_short_name'] = row_search_file_processed['short_name']
+            item['list_launch_date'] = row_search_file_processed['launch_date']
+            item['list_total_cores'] = row_search_file_processed['total_cores']
+            item['price_per_core'] = float(item['price_value']) / int(row_search_file_processed['total_cores'])
+
         # Write the data
         writer.writerows(mapped_data)
 
         try:
             while response['next']:
                 response = get_results(tokenoauth, response['next'])
+
+                for item in mapped_data:
+                    item['list_short_name'] = row_search_file_processed['short_name']
+                    item['list_launch_date'] = row_search_file_processed['launch_date']
+                    item['list_total_cores'] = row_search_file_processed['total_cores']
+
                 writer.writerows(get_mapped_data(response['itemSummaries']))
         except KeyError:
             pass
@@ -115,4 +127,4 @@ for row in search_file_processed:
     if response['total'] == 0:
         print(search_value + ' Empty')
         continue
-    first_pass = write_csv(csv_file, get_mapped_data(response['itemSummaries']), fieldnames, response, first_pass, tokenoauth)
+    first_pass = write_csv(csv_file, get_mapped_data(response['itemSummaries']), fieldnames, response, first_pass, tokenoauth, row)
