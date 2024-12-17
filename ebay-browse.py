@@ -96,28 +96,33 @@ def write_csv(csv_file, mapped_data, fieldnames, response, first_pass, tokenoaut
             first_pass = False
 
         for item in mapped_data:
-            item['list_short_name'] = row_search_file_processed['short_name']
-            item['list_launch_date'] = row_search_file_processed['launch_date']
-            item['list_total_cores'] = row_search_file_processed['total_cores']
-            item['price_per_core'] = float(item['price_value']) / int(row_search_file_processed['total_cores'])
+            custom_mapped_data(item, row_search_file_processed)
 
         # Write the data
         writer.writerows(mapped_data)
 
         try:
             while response['next']:
+                print(response['next'])
                 response = get_results(tokenoauth, response['next'])
-
+                print(response['next'])
+                mapped_data = get_mapped_data(response['itemSummaries'])
                 for item in mapped_data:
-                    item['list_short_name'] = row_search_file_processed['short_name']
-                    item['list_launch_date'] = row_search_file_processed['launch_date']
-                    item['list_total_cores'] = row_search_file_processed['total_cores']
+                    custom_mapped_data(item, row_search_file_processed)
 
-                writer.writerows(get_mapped_data(response['itemSummaries']))
+                writer.writerows(mapped_data)
         except KeyError:
             pass
     print(f'Data written to {csv_file}')
     return first_pass
+
+def custom_mapped_data(item, row_search_file_processed):
+    item['itemId'] = item['itemId'].split('|')[1]
+    item['list_short_name'] = row_search_file_processed['short_name']
+    item['list_launch_date'] = row_search_file_processed['launch_date']
+    item['list_total_cores'] = row_search_file_processed['total_cores']
+    item['price_per_core'] = '{:.2f}'.format(float(item['price_value']) / int(row_search_file_processed['total_cores']))
+    return item
 
 search_file_processed = read_csv(search_file)
 for row in search_file_processed:
