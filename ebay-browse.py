@@ -30,11 +30,17 @@ tokenoauth = generate_oauth_token(encoded_keys)
 def read_csv(search_file):
     with open(search_file, mode='r') as file:
         reader = csv.DictReader(file)
-        #for row in reader:
-            #print(row)
         search_file_processed = [row for row in reader]
     print(f'Data read from {search_file}')
     return search_file_processed
+
+# Create list from current output CSV
+def list_csv(csv_file):
+    with open(csv_file, mode='r') as file:
+        reader = csv.DictReader(file)
+        list_csv = [row['itemId'] for row in reader]
+    print(f'Existing Output CSV found. List created from {csv_file}')
+    return list_csv
 
 def get_results(tokenoauth, url):
     headers = { 'Accept-Lanuage': 'en-US', 'X-EBAY-C-MARKETPLACE-ID': 'EBAY_US', 'Authorization': 'Bearer ' + tokenoauth }
@@ -87,7 +93,7 @@ def get_mapped_data(response):
     return mapped_data
 
 # Write to CSV
-def write_csv(csv_file, mapped_data, fieldnames, response, first_pass, tokenoauth, row_search_file_processed):
+def write_csv(csv_file, mapped_data, fieldnames, response, first_pass, tokenoauth, row_search_file_processed, list_csv, search_value):
     with open(csv_file, mode='a', newline='', encoding='utf-8') as file: 
         writer = csv.DictWriter(file, fieldnames=fieldnames)
         # Write the header
@@ -98,6 +104,17 @@ def write_csv(csv_file, mapped_data, fieldnames, response, first_pass, tokenoaut
         for item in mapped_data:
             custom_mapped_data(item, row_search_file_processed)
 
+        list_csv_index = list()
+        for item in mapped_data:
+            #print(item['itemId'])
+            #print(list_csv.count(item['itemId']))
+            if list_csv.count(item['itemId']) > 0:
+                list_csv_index.append(item['itemId'])
+        #print(list_csv_index)
+        if len(list_csv_index) > 0:
+            for itemId in list_csv_index:
+                #print(itemId)
+                mapped_data[:] = [row for row in mapped_data if row.get('itemId') != itemId]
         # Write the data
         writer.writerows(mapped_data)
 
@@ -113,7 +130,7 @@ def write_csv(csv_file, mapped_data, fieldnames, response, first_pass, tokenoaut
                 writer.writerows(mapped_data)
         except KeyError:
             pass
-    print(f'Data written to {csv_file}')
+    print(f'Data written to {csv_file} for {search_value}')
     return first_pass
 
 def custom_mapped_data(item, row_search_file_processed):
@@ -125,6 +142,7 @@ def custom_mapped_data(item, row_search_file_processed):
     return item
 
 search_file_processed = read_csv(search_file)
+list_csv = list_csv(csv_file)
 for row in search_file_processed:
     search_value = row['short_name']
     url = 'https://api.ebay.com/buy/browse/v1/item_summary/search?q=1u ' + search_value + '&category_ids=11211&filter=price:[..1000],priceCurrency:USD,itemLocationCountry:US,searchInDescription:true'
@@ -132,4 +150,4 @@ for row in search_file_processed:
     if response['total'] == 0:
         print(search_value + ' Empty')
         continue
-    first_pass = write_csv(csv_file, get_mapped_data(response['itemSummaries']), fieldnames, response, first_pass, tokenoauth, row)
+    first_pass = write_csv(csv_file, get_mapped_data(response['itemSummaries']), fieldnames, response, first_pass, tokenoauth, row, list_csv, search_value)
