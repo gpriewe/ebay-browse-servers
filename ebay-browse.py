@@ -96,11 +96,7 @@ def get_mapped_data(response):
 def write_csv(csv_file, mapped_data, fieldnames, response, first_pass, tokenoauth, row_search_file_processed, list_csv, search_value):
     with open(csv_file, mode='a', newline='', encoding='utf-8') as file: 
         writer = csv.DictWriter(file, fieldnames=fieldnames)
-        # Write the header
-        if first_pass == True:
-            writer.writeheader()
-            first_pass = False
-
+        
         for item in mapped_data:
             custom_mapped_data(item, row_search_file_processed)
 
@@ -112,17 +108,24 @@ def write_csv(csv_file, mapped_data, fieldnames, response, first_pass, tokenoaut
                 list_csv_index.append(item['itemId'])
         #print(list_csv_index)
         if len(list_csv_index) > 0:
+            first_pass = False
+
             for itemId in list_csv_index:
                 #print(itemId)
                 mapped_data[:] = [row for row in mapped_data if row.get('itemId') != itemId]
+        
+        # Write the header
+        if first_pass == True:
+            writer.writeheader()
+            first_pass = False
         # Write the data
         writer.writerows(mapped_data)
 
         try:
             while response['next']:
-                print(response['next'])
+                #print(response['next'])
                 response = get_results(tokenoauth, response['next'])
-                print(response['next'])
+                #print(response['next'])
                 mapped_data = get_mapped_data(response['itemSummaries'])
                 for item in mapped_data:
                     custom_mapped_data(item, row_search_file_processed)
