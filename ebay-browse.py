@@ -34,13 +34,13 @@ def read_csv(search_file):
     print(f'Data read from {search_file}')
     return search_file_processed
 
-# Create list from current output CSV
-def list_csv(csv_file):
+# Create dictionary from current output CSV
+def dict_csv(csv_file):
     with open(csv_file, mode='r') as file:
         reader = csv.DictReader(file)
-        list_csv = [row['itemId'] for row in reader]
-    print(f'Existing Output CSV found. List created from {csv_file}')
-    return list_csv
+        dict_csv = [{'itemId': row['itemId'], 'validity': row['validity']} for row in reader]
+    print(f'Existing Output CSV found. Dictionary created from {csv_file}')
+    return dict_csv
 
 def get_results(tokenoauth, url):
     headers = { 'Accept-Lanuage': 'en-US', 'X-EBAY-C-MARKETPLACE-ID': 'EBAY_US', 'Authorization': 'Bearer ' + tokenoauth }
@@ -51,7 +51,7 @@ def get_results(tokenoauth, url):
 fieldnames = ['itemId', 'title', 'list_short_name', 'list_launch_date', 'list_total_cores', 'price_value', 'price_per_core', 
                 'seller_username', 'seller_feedbackPercentage', 'seller_feedbackScore', 'condition', 
                 'shippingOptions_shippingCostType', 'shippingOptions_shippingCost_value', 'buyingOptions', 'itemWebUrl', 
-                'itemLocation_postalCode', 'itemCreationDate']
+                'itemLocation_postalCode', 'itemCreationDate', 'validity', 'lastSeen']
 
 fieldname_mapping = {
     'itemId': ['itemId'],
@@ -93,25 +93,27 @@ def get_mapped_data(response):
     return mapped_data
 
 # Write to CSV
-def write_csv(csv_file, mapped_data, fieldnames, response, first_pass, tokenoauth, row_search_file_processed, list_csv, search_value):
+def write_csv(csv_file, mapped_data, fieldnames, response, first_pass, tokenoauth, row_search_file_processed, dict_csv, search_value):
     with open(csv_file, mode='a', newline='', encoding='utf-8') as file: 
         writer = csv.DictWriter(file, fieldnames=fieldnames)
         
         for item in mapped_data:
             custom_mapped_data(item, row_search_file_processed)
 
+        list_dict_csv = list()
+        for record in dict_csv:
+            list_dict_csv.append(record['itemId'])
+
         list_csv_index = list()
+        print(mapped_data)
+        print(list_dict_csv)
         for item in mapped_data:
-            #print(item['itemId'])
-            #print(list_csv.count(item['itemId']))
-            if list_csv.count(item['itemId']) > 0:
+            if list_dict_csv.count(item['itemId']) > 0:
                 list_csv_index.append(item['itemId'])
-        #print(list_csv_index)
         if len(list_csv_index) > 0:
             first_pass = False
 
             for itemId in list_csv_index:
-                #print(itemId)
                 mapped_data[:] = [row for row in mapped_data if row.get('itemId') != itemId]
         
         # Write the header
@@ -123,9 +125,7 @@ def write_csv(csv_file, mapped_data, fieldnames, response, first_pass, tokenoaut
 
         try:
             while response['next']:
-                #print(response['next'])
                 response = get_results(tokenoauth, response['next'])
-                #print(response['next'])
                 mapped_data = get_mapped_data(response['itemSummaries'])
                 for item in mapped_data:
                     custom_mapped_data(item, row_search_file_processed)
@@ -145,7 +145,7 @@ def custom_mapped_data(item, row_search_file_processed):
     return item
 
 search_file_processed = read_csv(search_file)
-list_csv = list_csv(csv_file)
+dict_csv = dict_csv(csv_file)
 for row in search_file_processed:
     search_value = row['short_name']
     url = 'https://api.ebay.com/buy/browse/v1/item_summary/search?q=1u ' + search_value + '&category_ids=11211&filter=price:[..1000],priceCurrency:USD,itemLocationCountry:US,searchInDescription:true'
@@ -153,4 +153,4 @@ for row in search_file_processed:
     if response['total'] == 0:
         print(search_value + ' Empty')
         continue
-    first_pass = write_csv(csv_file, get_mapped_data(response['itemSummaries']), fieldnames, response, first_pass, tokenoauth, row, list_csv, search_value)
+    first_pass = write_csv(csv_file, get_mapped_data(response['itemSummaries']), fieldnames, response, first_pass, tokenoauth, row, dict_csv, search_value)
