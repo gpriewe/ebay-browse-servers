@@ -1,4 +1,4 @@
-import requests, csv, base64
+import requests, csv, base64, datetime
 from dotenv import dotenv_values
 
 # Define the CSV file names
@@ -100,27 +100,24 @@ def write_csv(csv_file, mapped_data, fieldnames, response, first_pass, tokenoaut
         for item in mapped_data:
             custom_mapped_data(item, row_search_file_processed)
 
-        list_dict_csv = list()
-        for record in dict_csv:
-            list_dict_csv.append(record['itemId'])
+        # Extract itemId values from dict_csv
+        list_dict_csv = [record['itemId'] for record in dict_csv]
 
-        list_csv_index = list()
-        print(mapped_data)
-        print(list_dict_csv)
-        for item in mapped_data:
-            if list_dict_csv.count(item['itemId']) > 0:
-                list_csv_index.append(item['itemId'])
-        if len(list_csv_index) > 0:
-            first_pass = False
+        # Find matching itemIds between mapped_data and dict_csv
+        list_csv_index = [item['itemId'] for item in mapped_data if item['itemId'] in list_dict_csv]
+
+        if list_csv_index:
+            first_pass = False  # Since we found matching itemIds, set first_pass to False
 
             for itemId in list_csv_index:
                 mapped_data[:] = [row for row in mapped_data if row.get('itemId') != itemId]
-        
-        # Write the header
-        if first_pass == True:
+
+        # Write the header if this is the first write
+        if first_pass:
             writer.writeheader()
-            first_pass = False
-        # Write the data
+            first_pass = False  # Ensure it's only written once
+
+        # Write updated data
         writer.writerows(mapped_data)
 
         try:
@@ -129,6 +126,14 @@ def write_csv(csv_file, mapped_data, fieldnames, response, first_pass, tokenoaut
                 mapped_data = get_mapped_data(response['itemSummaries'])
                 for item in mapped_data:
                     custom_mapped_data(item, row_search_file_processed)
+
+                list_csv_index.clear
+                # Find matching itemIds between mapped_data and dict_csv
+                list_csv_index = [item['itemId'] for item in mapped_data if item['itemId'] in list_dict_csv]
+
+                if list_csv_index:
+                    for itemId in list_csv_index:
+                        mapped_data[:] = [row for row in mapped_data if row.get('itemId') != itemId]
 
                 writer.writerows(mapped_data)
         except KeyError:
@@ -142,6 +147,7 @@ def custom_mapped_data(item, row_search_file_processed):
     item['list_launch_date'] = row_search_file_processed['launch_date']
     item['list_total_cores'] = row_search_file_processed['total_cores']
     item['price_per_core'] = '{:.2f}'.format(float(item['price_value']) / int(row_search_file_processed['total_cores']))
+    item['lastSeen'] = datetime.datetime.now()
     return item
 
 search_file_processed = read_csv(search_file)
