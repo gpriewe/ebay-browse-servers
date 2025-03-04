@@ -1,16 +1,66 @@
 product_name,short_name,launch_date,total_cores,max_turbo_frequency,processor_base_frequency,cache,tdp
+Intel® Xeon® 6315P Processor,6315P,Q1'25,4,5.2 GHz,2.8 GHz,12 MB,55 W
+Intel® Xeon® 6325P Processor,6325P,Q1'25,4,5.2 GHz,3.5 GHz,12 MB,55 W
+Intel® Xeon® 6333P Processor,6333P,Q1'25,6,4.7 GHz,3.1 GHz,18 MB,65 W
+Intel® Xeon® 6337P Processor,6337P,Q1'25,6,5.3 GHz,3.5 GHz,18 MB,80 W
+Intel® Xeon® 6349P Processor,6349P,Q1'25,6,5.7 GHz,3.6 GHz,18 MB,95 W
+Intel® Xeon® 6353P Processor,6353P,Q1'25,8,5.4 GHz,2.7 GHz,24 MB,65 W
+Intel® Xeon® 6357P Processor,6357P,Q1'25,8,5.4 GHz,3 GHz,24 MB,80 W
+Intel® Xeon® 6369P Processor,6369P,Q1'25,8,5.7 GHz,3.3 GHz,24 MB,95 W
+Intel® Xeon® 6503P-B Processor,6503P-B,Q1'25,12,3.5 GHz,2 GHz,48 MB,110 W
+Intel® Xeon® 6505P Processor,6506P,Q1'25,12,4.10 GHz,2.20 GHz,48 MB,150 W
+Intel® Xeon® 6507P Processor,6507P,Q1'25,8,4.30 GHz,3.50 GHz,48 MB,150 W
+Intel® Xeon® 6511P Processor,6511P,Q1'25,16,4.20 GHz,2.30 GHz,72 MB,150 W
+Intel® Xeon® 6513P-B Processor,6513P-B,Q1'25,20,3.3 GHz,2 GHz,80 MB,130 W
+Intel® Xeon® 6515P Processor,6515P,Q1'25,16,3.80 GHz,2.30 GHz,72 MB,150 W
+Intel® Xeon® 6516P-B Processor,6516P-B,Q1'25,20,3.5 GHz,2.3 GHz,80 MB,145 W
+Intel® Xeon® 6517P Processor,6517P,Q1'25,16,4.20 GHz,3.20 GHz,72 MB,190 W
+Intel® Xeon® 6520P Processor,6520P,Q1'25,24,4 GHz,2.4 GHz,144 MB,210 W
+Intel® Xeon® 6521P Processor,6521P,Q1'25,24,4.1 GHz,2.6 GHz,144 MB,225 W
+Intel® Xeon® 6523P-B Processor,6523P-B,Q1'25,24,3.9 GHz,2.5 GHz,96 MB,175 W
+Intel® Xeon® 6527P Processor,6527P,Q1'25,24,4.2 GHz,3 GHz,144 MB,255 W
+Intel® Xeon® 6530P Processor,6530P,Q1'25,32,4.1 GHz,2.3 GHz,144 MB,225 W
+Intel® Xeon® 6533P-B Processor,6533P-B,Q1'25,32,3.9 GHz,2.2 GHz,128 MB,205 W
+Intel® Xeon® 6543P-B Processor,6543P-B,Q1'25,32,3.3 GHz,2 GHz,128 MB,160 W
+Intel® Xeon® 6546P-B Processor,6546P-B,Q1'25,32,3.5 GHz,2.3 GHz,128 MB,195 W
+Intel® Xeon® 6553P-B Processor,6553P-B,Q1'25,36,4 GHz,2.6 GHz,144 MB,235 W
+Intel® Xeon® 6556P-B Processor,6556P-B,Q1'25,36,3.5 GHz,2.3 GHz,144 MB,215 W
+Intel® Xeon® 6563P-B Processor,6563P-B,Q1'25,38,4 GHz,2.4 GHz,152 MB,235 W
+Intel® Xeon® 6706P-B Processor,6706P-B,Q1'25,40,3.5 GHz,2.5 GHz,160 MB,235 W
 Intel® Xeon® 6710E Processor,6710E,Q2'24,64,3.2 GHz,2.4 GHz,96 MB,205 W
+Intel® Xeon® 6714P Processor,6714P,Q1'25,8,4.30 GHz,4.00 GHz,48 MB,165 W
+Intel® Xeon® 6724P Processor,6724P,Q1'25,16,4.30 GHz,3.60 GHz,72 MB,210 W
+Intel® Xeon® 6726P-B Processor,6726P-B,Q1'25,42,3.5 GHz,2.3 GHz,168 MB,235 W
+Intel® Xeon® 6728P Processor,6728P,Q1'25,24,4.1 GHz,2.7 GHz,144 MB,210 W
+Intel® Xeon® 6730P Processor,6730P,Q1'25,32,3.80 GHz,2.50 GHz,288 MB,250 W
 Intel® Xeon® 6731E Processor,6731E,Q2'24,96,3.1 GHz,2.2 GHz,96 MB,250 W
+Intel® Xeon® 6731P Processor,6731P,Q1'25,32,4.1 GHz,2.5 GHz,144 MB,245 W
+Intel® Xeon® 6736P Processor,6736P,Q1'25,36,4.1 GHz,2 GHz,144 MB,205 W
+Intel® Xeon® 6737P Processor,6737P,Q1'25,32,4 GHz,2.9 GHz,144 MB,270 W
+Intel® Xeon® 6738P Processor,6738P,Q1'25,32,4.2 GHz,2.9 GHz,144 MB,270 W
 Intel® Xeon® 6740E Processor,6740E,Q2'24,96,3.2 GHz,2.4 GHz,96 MB,250 W
+Intel® Xeon® 6740P Processor,6740P,Q1'25,48,3.80 GHz,2.10 GHz,288 MB,270 W
+Intel® Xeon® 6741P Processor,6714P,Q1'25,48,3.80 GHz,2.50 GHz,288 MB,300 W
 Intel® Xeon® 6746E Processor,6746E,Q2'24,112,2.7 GHz,2 GHz,96 MB,250 W
+Intel® Xeon® 6747P Processor,6747P,Q1'25,48,3.90 GHz,2.70 GHz,288 MB,330 W
+Intel® Xeon® 6748P Processor,6748P,Q1'25,48,4.1 GHz,2.5 GHz,192 MB,300 W
 Intel® Xeon® 6756E Processor,6756E,Q2'24,128,2.6 GHz,1.8 GHz,96 MB,225 W
+Intel® Xeon® 6760P Processor,6760P,Q1'25,64,3.80 GHz,2.20 GHz,320 MB,330 W
+Intel® Xeon® 6761P Processor,6761P,Q1'25,64,3.90 GHz,2.50 GHz,336 MB,350 W
 Intel® Xeon® 6766E Processor,6766E,Q2'24,144,2.7 GHz,1.9 GHz,108 MB,250 W
+Intel® Xeon® 6767P Processor,6767P,Q1'25,64,3.90 GHz,2.40 GHz,336 MB,350 W
+Intel® Xeon® 6768P Processor,6768P,Q1'25,64,3.90 GHz,2.40 GHz,336 MB,330 W
 Intel® Xeon® 6780E Processor,6780E,Q2'24,144,3 GHz,2.2 GHz,108 MB,330 W
+Intel® Xeon® 6781P Processor,6781P,Q1'25,80,3.80 GHz,2.00 GHz,336 MB,350 W
+Intel® Xeon® 6787P Processor,6787P,Q1'25,86,3.80 GHz,2.00 GHz,336 MB,350 W
+Intel® Xeon® 6788P Processor,6788P,Q1'25,86,3.80 GHz,2.00 GHz,336 MB,350 W
+Intel® Xeon® 6944P Processor,6944P,Q1'25,72,3.9 GHz,1.8 GHz,432 MB,350 W
 Intel® Xeon® 6952P Processor,6952P,Q3'24,96,3.9 GHz,2.1 GHz,480 MB,400 W
 Intel® Xeon® 6960P Processor,6960P,Q3'24,72,3.9 GHz,2.7 GHz,432 MB,500 W
 Intel® Xeon® 6972P Processor,6972P,Q3'24,96,3.9 GHz,2.4 GHz,480 MB,500 W
 Intel® Xeon® 6979P Processor,6979P,Q3'24,120,3.9 GHz,2.1 GHz,504 MB,500 W
 Intel® Xeon® 6980P Processor,6980P,Q3'24,128,3.9 GHz,2 GHz,504 MB,500 W
+Intel® Xeon® Bronze 3204 Processor,3204,Q2'19,6,1.90 GHz,1.90 GHz,8.25 MB,85 W
 Intel® Xeon® Bronze 3206R Processor,3206R,Q1'20,8,1.90 GHz,1.90 GHz,11 MB,85 W
 Intel® Xeon® Bronze 3408U Processor,3408U,Q1'23,8,1.90 GHz,1.80 GHz,22.5 MB,125 W
 Intel® Xeon® Bronze 3508U Processor,3508U,Q4'23,8,2.2 GHz,2.10 GHz,22.5 MB,125 W
@@ -19,6 +69,14 @@ Intel® Xeon® CPU Max 9462 Processor,9462,Q1'23,32,3.50 GHz,2.70 GHz,75 MB,350 W
 Intel® Xeon® CPU Max 9468 Processor,9468,Q1'23,48,3.50 GHz,2.10 GHz,105 MB,350 W
 Intel® Xeon® CPU Max 9470 Processor,9470,Q1'23,52,3.50 GHz,2.00 GHz,105 MB,350 W
 Intel® Xeon® CPU Max 9480 Processor,9480,Q1'23,56,3.50 GHz,1.90 GHz,112.5 MB,350 W
+Intel® Xeon® D-1602 Processor,D-1602,Q2'19,2,3.20 GHz,2.50 GHz,3 MB,27 W
+Intel® Xeon® D-1622 Processor,D-1622,Q2'19,4,3.20 GHz,2.60 GHz,6 MB,40 W
+Intel® Xeon® D-1623N Processor,D-1623N,Q2'19,4,3.20 GHz,2.40 GHz,6 MB,35 W
+Intel® Xeon® D-1627 Processor,D-1627,Q2'19,4,3.20 GHz,2.90 GHz,6 MB,45 W
+Intel® Xeon® D-1633N Processor,D-1633N,Q2'19,6,3.20 GHz,2.50 GHz,9 MB,45 W
+Intel® Xeon® D-1637 Processor,D-1637,Q2'19,6,3.20 GHz,2.90 GHz,9 MB,55 W
+Intel® Xeon® D-1649N Processor,D-1649N,Q2'19,8,3.00 GHz,2.30 GHz,12 MB,45 W
+Intel® Xeon® D-1653N Processor,D-1653N,Q2'19,8,3.20 GHz,2.80 GHz,12 MB,65 W
 Intel® Xeon® D-1702 Processor,D-1702,Q1'22,2,1.70 GHz,1.60 GHz,5 MB,25 W
 Intel® Xeon® D-1712TR Processor,D-1712TR,Q1'22,4,3.10 GHz,2.00 GHz,10 MB,40 W
 Intel® Xeon® D-1713NT Processor,D-1713NT,Q1'22,4,3.50 GHz,2.20 GHz,10 MB,45 W
@@ -46,6 +104,19 @@ Intel® Xeon® D-1834 Processor,D-1834,Q4'23,8,2.9 GHz,1.80 GHz,15360,42 W
 Intel® Xeon® D-1844NT Processor,D-1844NT,Q4'23,10,3.1 GHz,2.00 GHz,15360,55 W
 Intel® Xeon® D-1846 Processor,D-1846,Q4'23,10,3.1 GHz,2.00 GHz,15360,55 W
 Intel® Xeon® D-1848TER Processor,D-1848TER,Q4'23,10,3.1 GHz,2.00 GHz,15360,57 W
+Intel® Xeon® D-2123IT Processor,D-2123IT,Q1'18,4,3.00 GHz,2.20 GHz,8 MB,60 W
+Intel® Xeon® D-2141I Processor,D-2141I,Q1'18,8,3.00 GHz,2.20 GHz,11 MB,65 W
+Intel® Xeon® D-2142IT Processor,D-2142IT,Q1'18,8,3.00 GHz,1.90 GHz,11 MB,65 W
+Intel® Xeon® D-2143IT Processor,D-2143IT,Q1'18,8,3.00 GHz,2.20 GHz,11 MB,65 W
+Intel® Xeon® D-2145NT Processor,D-2145NT,Q1'18,8,3.00 GHz,1.90 GHz,11 MB,65 W
+Intel® Xeon® D-2146NT Processor,D-2146NT,Q1'18,8,3.00 GHz,2.30 GHz,11 MB,80 W
+Intel® Xeon® D-2161I Processor,D-2161I,Q1'18,12,3.00 GHz,2.20 GHz,16.5 MB L2 Cache,90 W
+Intel® Xeon® D-2163IT Processor,D-2163IT,Q1'18,12,3.00 GHz,2.10 GHz,17 MB,75 W
+Intel® Xeon® D-2166NT Processor,D-2166NT,Q1'18,12,3.00 GHz,2.00 GHz,17 MB,85 W
+Intel® Xeon® D-2173IT Processor,D-2173IT,Q1'18,14,3.00 GHz,1.70 GHz,19 MB,70 W
+Intel® Xeon® D-2177NT Processor,D-2177NT,Q1'18,14,3.00 GHz,1.90 GHz,19 MB,105 W
+Intel® Xeon® D-2183IT Processor,D-2183IT,Q1'18,16,3.00 GHz,2.20 GHz,22 MB,100 W
+Intel® Xeon® D-2187NT Processor,D2187NT,Q1'18,16,3.00 GHz,2.00 GHz,22 MB,110 W
 Intel® Xeon® D-2712T Processor,D-2712T,Q1'22,4,3.00 GHz,1.90 GHz,15 MB,65 W
 Intel® Xeon® D-2733NT Processor,D-2733NT,Q1'22,8,3.20 GHz,2.10 GHz,15 MB,80 W
 Intel® Xeon® D-2738 Processor,D-2738,Q1'22,8,3.50 GHz,2.50 GHz,15 MB,88 W
@@ -73,6 +144,17 @@ Intel® Xeon® D-2876NT Processor,D-2876NT,Q4'23,16,3.1 GHz,2.00 GHz,20 MB,100 W
 Intel® Xeon® D-2896NT Processor,D-2896NT,Q4'23,20,3.2 GHz,2.00 GHz,30 MB,117 W
 Intel® Xeon® D-2896TER Processor,D-2896TER,Q4'23,20,3.2 GHz,2.00 GHz,30 MB,110 W
 Intel® Xeon® D-2899NT Processor,D-2899NT,Q4'23,22,3.1 GHz,2.20 GHz,30 MB,135 W
+Intel® Xeon® E-2124 Processor,E-2124,Q3'18,4,4.30 GHz,3.30 GHz,8 MB Intel® Smart Cache,71 W
+Intel® Xeon® E-2124G Processor,E-2124G,Q3'18,4,4.50 GHz,3.40 GHz,8 MB Intel® Smart Cache,71 W
+Intel® Xeon® E-2126G Processor,E-2126G,Q3'18,6,4.50 GHz,3.30 GHz,12 MB Intel® Smart Cache,80 W
+Intel® Xeon® E-2134 Processor,E-2134,Q3'18,4,4.50 GHz,3.50 GHz,8 MB Intel® Smart Cache,71 W
+Intel® Xeon® E-2136 Processor,E-2136,Q3'18,6,4.50 GHz,3.30 GHz,12 MB Intel® Smart Cache,80 W
+Intel® Xeon® E-2144G Processor,E-2144G,Q3'18,4,4.50 GHz,3.60 GHz,8 MB Intel® Smart Cache,71 W
+Intel® Xeon® E-2146G Processor,E-2146G,Q3'18,6,4.50 GHz,3.50 GHz,12 MB Intel® Smart Cache,80 W
+Intel® Xeon® E-2174G Processor,E-2174G,Q3'18,4,4.70 GHz,3.80 GHz,8 MB Intel® Smart Cache,71 W
+Intel® Xeon® E-2176M Processor,E-2176M,Q2'18,6,4.40 GHz,2.70 GHz,12 MB Intel® Smart Cache,45 W
+Intel® Xeon® E-2186G Processor,E-2186G,Q3'18,6,4.70 GHz,3.80 GHz,12 MB Intel® Smart Cache,95 W
+Intel® Xeon® E-2186M Processor,E-2186M,Q2'18,6,4.80 GHz,2.90 GHz,12 MB Intel® Smart Cache,45 W
 Intel® Xeon® E-2224 Processor,E-2224,Q2'19,4,4.60 GHz,3.40 GHz,8 MB Intel® Smart Cache,71 W
 Intel® Xeon® E-2224G Processor,E-2224G,Q2'19,4,4.70 GHz,3.50 GHz,8 MB Intel® Smart Cache,71 W
 Intel® Xeon® E-2226G Processor,E-2226G,Q2'19,6,4.70 GHz,3.40 GHz,12 MB Intel® Smart Cache,80 W
@@ -110,8 +192,19 @@ Intel® Xeon® E-2468 Processor,E-2468,Q4'23,8,5.2 GHz,2.6 GHz,24 MB,65 W
 Intel® Xeon® E-2478 Processor,E-2478,Q4'23,8,5.20 GHz,2.8 GHz,24 MB,80 W
 Intel® Xeon® E-2486 Processor,E-2486,Q4'23,6,5.6 GHz,3.5 GHz,18 MB,95 W
 Intel® Xeon® E-2488 Processor,E-2488,Q4'23,8,5.60 GHz,3.20 GHz,24 MB,95 W
+Intel® Xeon® Gold 5215 Processor,5215,Q2'19,10,3.40 GHz,2.50 GHz,13.75 MB,85 W
+Intel® Xeon® Gold 5215L Processor,5215L,Q2'19,10,3.40 GHz,2.50 GHz,13.75 MB,85 W
+Intel® Xeon® Gold 5217 Processor,5217,Q2'19,8,3.70 GHz,3.00 GHz,11 MB,115 W
+Intel® Xeon® Gold 5218 Processor,5218,Q2'19,16,3.90 GHz,2.30 GHz,22 MB,125 W
+Intel® Xeon® Gold 5218B Processor,5218B,Q2'19,16,3.90 GHz,2.30 GHz,22 MB,125 W
+Intel® Xeon® Gold 5218N Processor,5218N,Q2'19,16,3.70 GHz,2.30 GHz,22 MB,110 W
 Intel® Xeon® Gold 5218R Processor,5218R,Q1'20,20,4.00 GHz,2.10 GHz,27.5 MB,125 W
+Intel® Xeon® Gold 5218T Processor,5218T,Q2'19,16,3.80 GHz,2.10 GHz,22 MB,105 W
+Intel® Xeon® Gold 5220 Processor,5220,Q2'19,18,3.90 GHz,2.20 GHz,24.75 MB,125 W
 Intel® Xeon® Gold 5220R Processor,5220R,Q1'20,24,4.00 GHz,2.20 GHz,35.75 MB,150 W
+Intel® Xeon® Gold 5220S Processor,5220S,Q2'19,18,3.90 GHz,2.70 GHz,24.75 MB,125 W
+Intel® Xeon® Gold 5220T Processor,5220T,Q2'19,18,3.90 GHz,1.90 GHz,24.75 MB,105 W
+Intel® Xeon® Gold 5222 Processor,5222,Q2'19,4,3.90 GHz,3.80 GHz,16.5 MB,105 W
 Intel® Xeon® Gold 5315Y Processor,5315Y,Q2'21,8,3.60 GHz,3.20 GHz,12 MB,140 W
 Intel® Xeon® Gold 5317 Processor,5317,Q2'21,12,3.60 GHz,3.00 GHz,18 MB,150 W
 Intel® Xeon® Gold 5318H Processor,5318H,Q2'20,18,3.80 GHz,2.50 GHz,24.75 MB,150 W
@@ -134,18 +227,42 @@ Intel® Xeon® Gold 5433N Processor,5433N,Q1'23,20,4.10 GHz,2.30 GHz,37.5 MB,160 W
 Intel® Xeon® Gold 5512U Processor,5512U,Q4'23,28,3.7 GHz,2.1 GHz,52.5 MB,185 W
 Intel® Xeon® Gold 5515+ Processor,5515+,Q4'23,8,4.1 GHz,3.2 GHz,22.5 MB,165 W
 Intel® Xeon® Gold 5520+ Processor,5520+,Q4'23,28,4 GHz,2.2 GHz,52.5 MB,205 W
+Intel® Xeon® Gold 6138P Processor,6138P,Q2'18,20,3.70 GHz,2.00 GHz,27.5 MB L3 Cache,195 W
 Intel® Xeon® Gold 6208U Processor,6208U,Q1'20,16,3.90 GHz,2.90 GHz,22 MB,150 W
+Intel® Xeon® Gold 6209U Processor,6209U,Q2'19,20,3.90 GHz,2.10 GHz,27.5 MB,125 W
+Intel® Xeon® Gold 6210U Processor,6210U,Q2'19,20,3.90 GHz,2.50 GHz,27.5 MB,150 W
+Intel® Xeon® Gold 6212U Processor,6212U,Q2'19,24,3.90 GHz,2.40 GHz,35.75 MB,165 W
+Intel® Xeon® Gold 6222V Processor,6222V,Q2'19,20,3.60 GHz,1.80 GHz,27.5 MB,115 W
+Intel® Xeon® Gold 6226 Processor,6226,Q2'19,12,3.70 GHz,2.70 GHz,19.25 MB,125 W
 Intel® Xeon® Gold 6226R Processor,6226R,Q1'20,16,3.90 GHz,2.90 GHz,22 MB,150 W
+Intel® Xeon® Gold 6230 Processor,6230,Q2'19,20,3.90 GHz,2.10 GHz,27.5 MB,125 W
+Intel® Xeon® Gold 6230N Processor,6230N,Q2'19,20,3.50 GHz,2.30 GHz,27.5 MB,125 W
 Intel® Xeon® Gold 6230R Processor,6230R,Q1'20,26,4.00 GHz,2.10 GHz,35.75 MB,150 W
+Intel® Xeon® Gold 6230T Processor,6230T,Q2'19,20,3.90 GHz,2.10 GHz,27.5 MB,125 W
+Intel® Xeon® Gold 6234 Processor,6234,Q2'19,8,4.00 GHz,3.30 GHz,24.75 MB,130 W
+Intel® Xeon® Gold 6238 Processor,6238,Q2'19,22,3.70 GHz,2.10 GHz,30.25 MB,140 W
+Intel® Xeon® Gold 6238L Processor,6238L,Q2'19,22,3.70 GHz,2.10 GHz,30.25 MB,140 W
 Intel® Xeon® Gold 6238R Processor,6238R,Q1'20,28,4.00 GHz,2.20 GHz,38.5 MB,165 W
+Intel® Xeon® Gold 6238T Processor,6238T,Q2'19,22,3.70 GHz,1.90 GHz,30.25 MB,125 W
+Intel® Xeon® Gold 6240 Processor,6240,Q2'19,18,3.90 GHz,2.60 GHz,24.75 MB,150 W
+Intel® Xeon® Gold 6240L Processor,6240L,Q2'19,18,3.90 GHz,2.60 GHz,24.75 MB,150 W
 Intel® Xeon® Gold 6240R Processor,6240R,Q1'20,24,4.00 GHz,2.40 GHz,35.75 MB,165 W
+Intel® Xeon® Gold 6240Y Processor,6240Y,Q2'19,18,3.90 GHz,2.60 GHz,24.75 MB,150 W
+Intel® Xeon® Gold 6242 Processor,6242,Q2'19,16,3.90 GHz,2.80 GHz,22 MB,150 W
 Intel® Xeon® Gold 6242R Processor,6242R,Q1'20,20,4.10 GHz,3.10 GHz,35.75 MB,205 W
+Intel® Xeon® Gold 6244 Processor,6244,Q2'19,8,4.40 GHz,3.60 GHz,24.75 MB,150 W
+Intel® Xeon® Gold 6246 Processor,6246,Q2'19,12,4.20 GHz,3.30 GHz,24.75 MB,165 W
 Intel® Xeon® Gold 6246R Processor,6246R,Q1'20,16,4.10 GHz,3.40 GHz,35.75 MB,205 W
+Intel® Xeon® Gold 6248 Processor,6248,Q2'19,20,3.90 GHz,2.50 GHz,27.5 MB,150 W
 Intel® Xeon® Gold 6248R Processor,6248R,Q1'20,24,4.00 GHz,3.00 GHz,35.75 MB,205 W
 Intel® Xeon® Gold 6250 Processor,6250,Q1'20,8,4.50 GHz,3.90 GHz,35.75 MB,185 W
 Intel® Xeon® Gold 6250L Processor,6250L,Q1'20,8,4.50 GHz,3.90 GHz,35.75 MB,185 W
+Intel® Xeon® Gold 6252 Processor,6252,Q2'19,24,3.70 GHz,2.10 GHz,35.75 MB,150 W
+Intel® Xeon® Gold 6252N Processor,6252N,Q2'19,24,3.60 GHz,2.30 GHz,35.75 MB,150 W
+Intel® Xeon® Gold 6254 Processor,6254,Q2'19,18,4.00 GHz,3.10 GHz,24.75 MB,200 W
 Intel® Xeon® Gold 6256 Processor,6256,Q1'20,12,4.50 GHz,3.60 GHz,33 MB,205 W
 Intel® Xeon® Gold 6258R Processor,6258R,Q1'20,28,4.00 GHz,2.70 GHz,38.5 MB,205 W
+Intel® Xeon® Gold 6262V Processor,6262V,Q2'19,24,3.60 GHz,1.90 GHz,33 MB,135 W
 Intel® Xeon® Gold 6312U Processor,6312U,Q2'21,24,3.60 GHz,2.40 GHz,36 MB,185 W
 Intel® Xeon® Gold 6314U Processor,6314U,Q2'21,32,3.40 GHz,2.30 GHz,48 MB,205 W
 Intel® Xeon® Gold 6326 Processor,6326,Q2'21,16,3.50 GHz,2.90 GHz,24 MB,185 W
@@ -198,6 +315,17 @@ Intel® Xeon® Gold 6548N Processor,6548N,Q4'23,32,4.1 GHz,2.8 GHz,60 MB,250 W
 Intel® Xeon® Gold 6548Y+ Processor,6548Y+,Q4'23,32,4.1 GHz,2.5 GHz,60 MB,250 W
 Intel® Xeon® Gold 6554S Processor,6554S,Q4'23,36,4 GHz,2.2 GHz,180 MB,270 W
 Intel® Xeon® Gold 6558Q Processor,6558Q,Q4'23,32,4.1 GHz,3.2 GHz,60 MB,350 W
+Intel® Xeon® Platinum 8253 Processor,8253,Q2'19,16,3.00 GHz,2.20 GHz,22 MB,125 W
+Intel® Xeon® Platinum 8256 Processor,8256,Q2'19,4,3.90 GHz,3.80 GHz,16.5 MB,105 W
+Intel® Xeon® Platinum 8260 Processor,8260,Q2'19,24,3.90 GHz,2.40 GHz,35.75 MB,165 W
+Intel® Xeon® Platinum 8260L Processor,8260L,Q2'19,24,3.90 GHz,2.40 GHz,35.75 MB,165 W
+Intel® Xeon® Platinum 8260Y Processor,8260Y,Q2'19,24,3.90 GHz,2.40 GHz,35.75 MB,165 W
+Intel® Xeon® Platinum 8268 Processor,8268,Q2'19,24,3.90 GHz,2.90 GHz,35.75 MB,205 W
+Intel® Xeon® Platinum 8270 Processor,8270,Q2'19,26,4.00 GHz,2.70 GHz,35.75 MB,205 W
+Intel® Xeon® Platinum 8276 Processor,8276,Q2'19,28,4.00 GHz,2.20 GHz,38.5 MB,165 W
+Intel® Xeon® Platinum 8276L Processor,8276L,Q2'19,28,4.00 GHz,2.20 GHz,38.5 MB,165 W
+Intel® Xeon® Platinum 8280 Processor,8280,Q2'19,28,4.00 GHz,2.70 GHz,38.5 MB,205 W
+Intel® Xeon® Platinum 8280L Processor,8280L,Q2'19,28,4.00 GHz,2.70 GHz,38.5 MB,205 W
 Intel® Xeon® Platinum 8351N Processor,8351N,Q2'21,36,3.50 GHz,2.40 GHz,54 MB,225 W
 Intel® Xeon® Platinum 8352M Processor,8352M,Q2'21,32,3.50 GHz,2.30 GHz,48 MB,185 W
 Intel® Xeon® Platinum 8352S Processor,8352S,Q2'21,32,3.40 GHz,2.20 GHz,48 MB,205 W
@@ -251,10 +379,20 @@ Intel® Xeon® Platinum 8592V Processor,8592V,Q4'23,64,3.9 GHz,2 GHz,320 MB,330 W
 Intel® Xeon® Platinum 8593Q Processor,8593Q,Q4'23,64,3.9 GHz,2.2 GHz,320 MB,385 W
 Intel® Xeon® Platinum 9221 Processor,9221,Q3'19,32,3.70 GHz,2.30 GHz,71.5 MB,250 W
 Intel® Xeon® Platinum 9222 Processor,9222,Q3'19,32,3.70 GHz,2.30 GHz,71.5 MB,250 W
+Intel® Xeon® Platinum 9242 Processor,9242,Q2'19,48,3.80 GHz,2.30 GHz,71.5 MB Intel® Smart Cache,350 W
+Intel® Xeon® Platinum 9282 Processor,9282,Q2'19,56,3.80 GHz,2.60 GHz,77 MB Intel® Smart Cache,400 W
+Intel® Xeon® Processor D-1524N,D-1524N,Q4'18,4,2.6 GHz,2.00 GHz,6 MB,45 W
+Intel® Xeon® Silver 4208 Processor,4208,Q2'19,8,3.20 GHz,2.10 GHz,11 MB,85 W
+Intel® Xeon® Silver 4209T Processor,4209T,Q2'19,8,3.20 GHz,2.20 GHz,11 MB,70 W
+Intel® Xeon® Silver 4210 Processor,4210,Q2'19,10,3.20 GHz,2.20 GHz,13.75 MB,85 W
 Intel® Xeon® Silver 4210R Processor,4210R,Q1'20,10,3.20 GHz,2.40 GHz,13.75 MB,100 W
 Intel® Xeon® Silver 4210T Processor,4210T,Q1'20,10,3.20 GHz,2.30 GHz,13.75 MB,95 W
+Intel® Xeon® Silver 4214 Processor,4214,Q2'19,12,3.20 GHz,2.20 GHz,16.5 MB,85 W
 Intel® Xeon® Silver 4214R Processor,4214R,Q1'20,12,3.50 GHz,2.40 GHz,16.5 MB,100 W
+Intel® Xeon® Silver 4214Y Processor,4214Y,Q2'19,12,3.20 GHz,2.20 GHz,16.5 MB,85 W
+Intel® Xeon® Silver 4215 Processor,4215,Q2'19,8,3.50 GHz,2.50 GHz,11 MB,85 W
 Intel® Xeon® Silver 4215R Processor,4215R,Q1'20,8,4.00 GHz,3.20 GHz,11 MB,130 W
+Intel® Xeon® Silver 4216 Processor,4216,Q2'19,16,3.20 GHz,2.10 GHz,22 MB,100 W
 Intel® Xeon® Silver 4309Y Processor,4309Y,Q2'21,8,3.60 GHz,2.80 GHz,12 MB,105 W
 Intel® Xeon® Silver 4310 Processor,4310,Q2'21,12,3.30 GHz,2.10 GHz,18 MB,120 W
 Intel® Xeon® Silver 4310T Processor,4310T,Q2'21,10,3.40 GHz,2.30 GHz,15 MB,105 W
@@ -306,6 +444,7 @@ Intel® Xeon® W-2255 Processor,W-2255,Q4'19,10,4.50 GHz,3.70 GHz,19.25 MB,165 W
 Intel® Xeon® W-2265 Processor,W-2265,Q4'19,12,4.60 GHz,3.50 GHz,19.25 MB,165 W
 Intel® Xeon® W-2275 Processor,W-2275,Q4'19,14,4.60 GHz,3.30 GHz,19.25 MB,165 W
 Intel® Xeon® W-2295 Processor,W-2295,Q4'19,18,4.60 GHz,3.00 GHz,24.75 MB,165 W
+Intel® Xeon® W-3175X Processor,W-3175X,Q4'18,28,3.80 GHz,3.10 GHz,38.5 MB,255 W
 Intel® Xeon® W-3223 Processor,W-3223,Q2'19,8,4.00 GHz,3.50 GHz,16.5 MB,160 W
 Intel® Xeon® W-3225 Processor,W-3225,Q2'19,8,4.30 GHz,3.70 GHz,16.5 MB,160 W
 Intel® Xeon® W-3235 Processor,W-3235,Q2'19,12,4.40 GHz,3.30 GHz,19.25 MB,180 W
