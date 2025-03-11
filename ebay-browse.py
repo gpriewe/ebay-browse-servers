@@ -28,7 +28,7 @@ tokenoauth = generate_oauth_token(encoded_keys)
 
 # Read from CSV
 def read_csv(search_file):
-    with open(search_file, mode='r') as file:
+    with open(search_file, mode='r', encoding='utf-8') as file:
         reader = csv.DictReader(file)
         search_file_processed = [row for row in reader]
     print(f'Data read from {search_file}')
@@ -36,7 +36,7 @@ def read_csv(search_file):
 
 # Create dictionary from current output CSV
 def dict_csv(csv_file):
-    with open(csv_file, mode='r') as file:
+    with open(csv_file, mode='r', encoding='utf-8') as file:
         reader = csv.DictReader(file)
         dict_csv = [{'itemId': row['itemId'], 'validity': row['validity']} for row in reader]
     print(f'Existing Output CSV found. Dictionary created from {csv_file}')
